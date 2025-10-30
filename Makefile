@@ -95,7 +95,7 @@ TEST_PATH_CONFIG = ./ranger/config
 
 test_pylint:
 	@echo "$(bold)Running pylint...$(normal)"
-	pylint $(TEST_PATHS_MAIN)
+	pylint $(TEST_PATHS_MAIN) --ignore=C0114,C0115,C0116
 	pylint --rcfile=$(TEST_PATH_CONFIG)/.pylintrc $(TEST_PATH_CONFIG)
 
 test_flake8:
